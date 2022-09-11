@@ -1,0 +1,9 @@
+version: '2'
+
+services:
+  app:
+    image: ghcr.io/go4ble/nvidia-external-fan-control:latest
+    build: .
+    runtime: nvidia
+    volumes:
+      - /mnt/hwmon/pwm6:/mnt/fan
